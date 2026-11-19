@@ -1,0 +1,14 @@
+name: tcg_core
+description: Dominio puro (Dart) di tcg-scan: entità, failure, contratti dei repository e use case.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.4.0
+
+dependencies:
+  fpdart: ^1.1.0
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.0
