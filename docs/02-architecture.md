@@ -37,7 +37,7 @@ Regola: le entità del domain non portano annotazioni JSON né tipi del database
 5. Il Cubit emette uno stato `loading`, `success` o `error`.
 
 ## Iniezione delle dipendenze
-Da scegliere in un ADR dedicato (get_it o costruzione manuale nel composition root). Finché non è deciso, le dipendenze vengono costruite in un unico file di bootstrap.
+Si usa **get_it** (vedi ADR-006). Tutte le registrazioni sono nel composition root in `app/`, chiamato prima di `runApp`. Il domain non dipende da get_it: riceve le dipendenze dal costruttore.
 
 ## Predisposizione IoT
 Il core non dipende da Flutter, quindi può girare su un server o su un dispositivo embedded. L'interfaccia verso l'hardware sarà un adapter nel data layer, con contratti definiti nel domain.
